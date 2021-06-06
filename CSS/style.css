@@ -1,4 +1,87 @@
-body {
-  background-color: red;
-  color: white;
+/* mobile */
+
+.film-img {
+  height: 356px;
+}
+
+.film-name {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+.film-properties {
+  display: flex;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px; /*перемерять для Vote и Popularity */
+}
+
+.properties {
+  color: #8c8c8c;
+  margin-right: 41px;
+}
+
+.film-origin-title {
+  text-transform: uppercase;
+}
+
+.film-about {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.film-description {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons button {
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  max-width: 112px;
+  max-height: 44px;
+}
+
+.add-watched_button {
+  margin-right: 15px;
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+  .film {
+    display: flex;
+  }
+
+  .film-img {
+    height: 374px;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1024px) {
+  .film-img {
+    height: 478px;
+  }
+
+  .film-name {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+  }
 }
