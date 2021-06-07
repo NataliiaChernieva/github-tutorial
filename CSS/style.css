@@ -1,7 +1,32 @@
-/* mobile */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  /* outline: 1px solid red; */
+}
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* mobile */
 .film-img {
   height: 356px;
+  margin-bottom: 15px;
+  margin-top: 16px;
 }
 
 .film-name {
@@ -10,6 +35,8 @@
   font-size: 20px;
   line-height: 23px;
   text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 .film-properties {
@@ -17,11 +44,17 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 16px; /*перемерять для Vote и Popularity */
+  margin-bottom: 20px;
 }
 
 .properties {
   color: #8c8c8c;
   margin-right: 41px;
+}
+
+.properties li:not(:last-child),
+.property-value li:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .film-origin-title {
@@ -33,12 +66,14 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
+  margin-bottom: 10px;
 }
 
 .film-description {
   font-weight: 500;
   font-size: 12px;
   line-height: 20px;
+  margin-bottom: 21px;
 }
 
 .buttons {
@@ -52,19 +87,34 @@
   text-transform: uppercase;
   font-weight: 500;
   font-size: 12px;
+  /* text-align: center; */
   line-height: 16px;
-  max-width: 112px;
-  max-height: 44px;
+  width: 112px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 7px;
+  padding-right: 7px;
+  /* max-height: 44px; */
 }
 
 .add-watched_button {
   margin-right: 15px;
 }
 
+.buttons button:hover,
+.buttons button:focus {
+  background-color: #ff6b01;
+  border: 1px solid #ff6b01;
+}
+
 /* tablet */
 @media screen and (min-width: 768px) {
   .film {
     display: flex;
+  }
+
+  .left-side {
+    margin-right: 32px;
   }
 
   .film-img {
@@ -74,6 +124,10 @@
 
 /* desktop */
 @media screen and (min-width: 1024px) {
+  .left-side {
+    margin-right: 30px;
+  }
+
   .film-img {
     height: 478px;
   }
