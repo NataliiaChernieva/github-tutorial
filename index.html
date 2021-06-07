@@ -38,5 +38,36 @@
            </div>
         </div>
     </div>
+
+<!-- шаблон для галлереи фильмов -->
+    <ul>
+        {{#each this.result}}
+        <li>
+            <img src={{poster_path}} alt={{original_title}}>
+            <h2>{{original_title}}</h2>
+            <ul class="film-list_info">
+                <li>{{genre_ids}}</li>
+                <li>|</li>
+                <li>{{release_date}}</li>
+                <li>{{vote_average}}</li>
+            </ul>
+        </li>
+        {{/each}}
+    </ul>
 </body>
 </html>
+
+
+<!-- Модалка -->
+<div class="lightbox js-lightbox">
+    <div class="lightbox__overlay"></div>
+    <div class="modal">
+        <button type="button" class="modal-close-button" data-modal-close>
+            <svg class="modal-icon" width="30" height="30">
+               <use href='./src/images/lightbox-close-button.svg#icon-close'></use>
+            </svg>
+        </button>
+
+    </div>
+
+</div>
